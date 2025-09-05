@@ -1,4 +1,4 @@
-# GroceryApp Sprint 1 - Lucasversie 
+# GroceryApp Sprint 1 - Lucas versie 
 In deze versie zijn de wijzigingen doorgevoerd en is de code compleet.  
 
 ## Studentversie:  
