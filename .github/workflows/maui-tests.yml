@@ -13,24 +13,20 @@ on:
 
 jobs:
   test:
-    runs-on: windows-latest  # Windows runner is voldoende, Android/MacCatalyst workloads worden lokaal gebouwd
+    runs-on: windows-latest
     steps:
-      - name: Haal de repository op
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Installeer .NET SDK
-        uses: actions/setup-dotnet@v3
+      - uses: actions/setup-dotnet@v3
         with:
           dotnet-version: '8.0.x'
 
-      - name: Installeer MAUI workloads
-        run: dotnet workload install maui
+      - run: dotnet workload install maui
 
-      - name: Herstel afhankelijkheden voor Windows en Android
-        run: dotnet restore --runtime win10-x64;android-arm64;android-x64;android-x86;android-arm
+      - name: Herstel afhankelijkheden voor Android
+        run: dotnet restore --runtime android-arm64;android-x64;android-x86;android-arm
 
-
-      - name: Bouw de applicatie
+      - name: Bouw de applicatie voor Windows en Android
         run: dotnet build --configuration Release --no-restore
 
       - name: Voer unit tests uit
