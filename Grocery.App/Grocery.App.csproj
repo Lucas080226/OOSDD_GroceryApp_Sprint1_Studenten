@@ -40,8 +40,9 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<RuntimeIdentifiers>android-arm64;android-x86;android-x64;ios-arm64;maccatalyst-arm64;win-x64</RuntimeIdentifiers>
+		<RuntimeIdentifiers>android-arm64;android-x64;ios-arm64;maccatalyst-arm64;win-x64</RuntimeIdentifiers>
 	</PropertyGroup>
+
 
 
 	<ItemGroup>
