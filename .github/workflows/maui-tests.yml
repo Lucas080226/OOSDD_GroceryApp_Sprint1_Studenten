@@ -26,9 +26,8 @@ jobs:
       - name: Herstel afhankelijkheden voor Android
         run: dotnet restore
 
-
-      - name: Bouw de applicatie voor Windows en Android
-        run: dotnet build --configuration Release --no-restore
+      - name: Bouw de applicatie
+        run: dotnet build -f net8.0-android --configuration Release --no-restore
 
       - name: Voer unit tests uit
-        run: dotnet test --configuration Release --no-restore --no-build --verbosity normal
+        run: dotnet test -f net8.0-android --configuration Release --no-restore --no-build --verbosity normal
