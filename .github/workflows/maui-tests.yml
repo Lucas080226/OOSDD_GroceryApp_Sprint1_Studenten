@@ -27,7 +27,7 @@ jobs:
         run: dotnet workload install maui
 
       - name: Herstel afhankelijkheden voor Windows en Android
-        run: dotnet restore --runtime android-arm64;android-arm;maccatalyst-x64
+        run: dotnet restore --runtime android-arm64;maccatalyst-x64
 
       - name: Bouw de applicatie
         run: dotnet build --configuration Release --no-restore
