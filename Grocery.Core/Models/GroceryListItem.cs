@@ -8,8 +8,9 @@
 
         public GroceryListItem(int id, int groceryListId, int productId, int amount) : base(id, "")
         {
-            groceryListId = GroceryListId;
-            productId = ProductId;
+            GroceryListId = groceryListId;
+            ProductId = productId;
+            Amount = amount;
         }
 
         public Product Product { get; set; } = new(0, "None", 0);
